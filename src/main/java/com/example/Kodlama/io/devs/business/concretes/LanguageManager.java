@@ -21,8 +21,29 @@ public class LanguageManager implements LanguageService{
     }
     @Override
     public List<ProgramingLanguage> getAll() {
-        // TODO Auto-generated method stub
         return programingLanguageRepository.getAll();
+    }
+
+    
+    @Override
+    public ProgramingLanguage getById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+    }
+    @Override
+    public void delete(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+    }
+    @Override
+    public void add(ProgramingLanguage programingLanguage) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
+    }
+    @Override
+    public void update(ProgramingLanguage oldLanguage, ProgramingLanguage newLanguage) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
 }

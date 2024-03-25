@@ -1,4 +1,5 @@
 package com.example.Kodlama.io.devs.webApi.controllers;
+
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +16,8 @@ import com.example.Kodlama.io.devs.entities.concretes.ProgramingLanguage;
 public class ProgramingLanguageController {
 
     private LanguageService languageService;
-    public ProgramingLanguageController(LanguageService languageService)
-    {
+
+    public ProgramingLanguageController(LanguageService languageService) {
         this.languageService = languageService;
     }
 
@@ -24,11 +25,12 @@ public class ProgramingLanguageController {
     public List<ProgramingLanguage> getLanguages() {
         return languageService.getAll();
     }
+
     @GetMapping("/{id}")
     public ProgramingLanguage getLanguageWithId(@PathVariable("id") int id) {
-        // TODO: id ye göre veri getirme methodu yazılacak
-        return null;
+        return languageService.getById(id);
+        
     }
-    
+
     
 }

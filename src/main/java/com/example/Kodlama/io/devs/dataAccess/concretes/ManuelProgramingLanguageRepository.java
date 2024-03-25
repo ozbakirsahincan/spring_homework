@@ -28,4 +28,31 @@ public class ManuelProgramingLanguageRepository implements ProgramingLanguageRep
         return programingLanguages;
     }
 
+
+    @Override
+    public void delete(int _id) {
+        for (ProgramingLanguage language : programingLanguages) {
+            if(language.getId() == _id){
+                programingLanguages.remove(_id);
+            }
+        }
+        
+    }
+
+
+    @Override
+    public void add(ProgramingLanguage programingLanguage) {
+        programingLanguages.add(programingLanguage);
+    }
+
+
+    @Override
+    public void update(ProgramingLanguage oldLanguage, ProgramingLanguage newLanguage) {
+        for (ProgramingLanguage pl : programingLanguages) {
+            if(pl.getId() == oldLanguage.getId()){
+                pl = newLanguage;
+            }
+        }
+    }
+
 }
